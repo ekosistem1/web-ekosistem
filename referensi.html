@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Website Ekosistem</title>
+</head>
+<body class="bg-white">
+    <nav id="navbar-desktop" class="shadow-xl p-6 flex justify-between items-center fixed top-0 left-0 w-full z-50" style="background-color: rgba(205, 206, 207, 0.3);">
+        <div class="min320:ml-4 min410:ml-6 lg:hidden">
+            <button id="menu-btn" class="text-gray-800 text-3xl">
+                ☰
+            </button>
+        </div>
+        <!-- button sebelah kiri -->
+        <div id="desktop-menu" class="flex space-x-6 ml-4 hidden lg:flex">
+            <a href="index.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Beranda</a>
+            <a href="daftarisi.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Daftar Isi</a>
+            <a href="referensi.html" class="px-10 py-2 bg-gradient-to-br from-gray-800 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Referensi</a>
+        </div>
+        <!-- logo kanan -->
+        <div class="w-10 h-10 mr-6 rounded-full bg-gray-300 flex items-center justify-center">
+            <img src="Gambar pendukung/unpas.png" class="w-full h-full rounded-full object-cover">
+        </div>
+    </nav>
+    
+    <!-- navbar mobile -->
+    <div id="navbar" class="bg-white p-4 flex flex-col mt-20 w-full h-screen fixed top-0 left-0 space-y-2 -translate-y-full transition-transform ease-in-out duration-300 lg:hidden" style="background-color: rgba(205, 206, 207, 1);">
+        <a href="index.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Beranda</a>
+        <a href="daftarisi.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Daftar Isi</a>
+        <a href="referensi.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Referensi</a>
+    </div>
+    
+    <div class="min320:px-2 lg:p-2 max-h-screen mt-24">
+        <div class="p-5 rounded shadow py-6" style="background-color: rgba(205, 206, 207, 0.7);">
+            <p class="text-black min320:text-2xl lg:text-4xl font-bold text-center">
+                Sumber Referensi
+            </p>
+            <p class="mt-6 text-black min320:text-lg lg:text-xl font-bold text-justify"> Campbell, dkk. 2008. Biologi Edisi ke-8 Jilid 3. Jakarta: Erlangga</p>
+            <p class="mt-3 text-black min320:text-lg lg:text-xl font-bold text-justify">Cartono, C. 2004. Biologi Umum Untuk Perguruan Tinggi LPTK. Bandung: Prisma Press.</p>
+            <p class="mt-3 text-black min320:text-lg lg:text-xl font-bold text-justify"> Irnaningtyas. 2013. Biologi Untuk SMA/MA Kelas X. Jakarta: Erlangga</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

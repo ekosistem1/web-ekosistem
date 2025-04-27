@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Website Ekosistem</title>
+</head>
+<body class="bg-white">
+    <!-- navbar -->
+    <nav id="navbar-desktop" class="shadow-xl p-6 flex justify-between items-center fixed top-0 left-0 w-full z-40 lg:flex" style="background-color: rgba(205, 206, 207, 0.3);">
+        <div class="min320:ml-4 min410:ml-6 lg:hidden">
+            <button id="menu-btn-desktop" class="text-gray-800 text-3xl">
+                ☰
+            </button>
+        </div>
+        <!-- button sebelah kiri -->
+        <div id="desktop-menu" class="flex space-x-6 ml-4 hidden lg:flex">
+            <a href="index.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Beranda</a>
+            <a href="daftarisi.html" class="px-10 py-2 bg-gradient-to-br from-gray-800 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Daftar Isi</a>
+            <a href="referensi.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Referensi</a>
+        </div>
+        <!-- logo kanan -->
+        <div class="w-10 h-10 mr-6 rounded-full bg-gray-300 flex items-center justify-center">
+            <img src="Gambar pendukung/unpas.png" class="w-full h-full rounded-full object-cover">
+        </div>
+    </nav>
+
+    <nav id="navbar-mobile" class="shadow-xl p-6 flex justify-between items-center fixed top-0 left-0 w-full z-40 lg:hidden" style="background-color: rgba(205, 206, 207, 1);">
+        <div class="min320:ml-4 min410:ml-6 lg:hidden">
+            <button id="menu-btn" class="text-gray-800 text-3xl">
+                ☰
+            </button>
+        </div>
+        <!-- button sebelah kiri -->
+        <div id="desktop-menu" class="flex space-x-6 ml-4 hidden lg:flex">
+            <a href="index.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Beranda</a>
+            <a href="daftarisi.html" class="px-10 py-2 bg-gradient-to-br from-gray-800 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Daftar Isi</a>
+            <a href="referensi.html" class="px-10 py-2 bg-gradient-to-br from-gray-300 to-blue-200 text-black font-bold rounded-full hover:bg-blue-500 transition">Referensi</a>
+        </div>
+        <!-- logo kanan -->
+        <div class="w-10 h-10 mr-6 rounded-full bg-gray-300 flex items-center justify-center">
+            <img src="Gambar pendukung/unpas.png" class="w-full h-full rounded-full object-cover">
+        </div>
+    </nav>
+    
+    <!-- navbar mobile -->
+    <div id="navbar" class="bg-white p-4 flex flex-col mt-20 w-full h-screen fixed top-0 left-0 space-y-2 -translate-y-full transition-transform ease-in-out duration-300 lg:hidden" style="background-color: rgba(205, 206, 207, 1);">
+        <a href="index.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Beranda</a>
+        <a href="daftarisi.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Daftar Isi</a>
+        <a href="referensi.html" class="px-10 py-2 text-black font-bold rounded-full hover:bg-blue-200 transition">Referensi</a>
+    </div>
+
+    <div class="mt-24 lg:p-4">
+        <!-- Sidebar -->
+        <aside id="sidebar-dekstop" class="h-[calc(100dvh-7rem)] overflow-y-auto fixed w-64 bg-gray-800 text-white" style="background-color: rgba(205, 206, 207, 1);">
+            <ul class="py-2 px-2">
+                <li>
+                    <a id="pre-test" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('pretest.html', 'pre-test')">Pretest</a>
+                </li>
+                <li>
+                    <a id="apersepsi" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('apersepsi.html', 'apersepsi')">Apersepsi</a>
+                </li>
+                <li>
+                    <a  id="preview" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('preview.html', 'preview')">Preview</a>
+                </li>
+                <li >
+                    <a href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu1'), loadContent('Ekosistem.html')">Ekosistem</a>
+                    <!-- Submenu -->
+                    <ul id="submenu1" class="hidden pl-4">
+                        <li><a id="kpe" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Komponen_Penyusun_Ekosistem.html', 'kpe')">Komponen Penyusun Ekosistem</a></li>
+                        <li><a id="teb" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('tipe_ekosistem_bioma.html', 'teb')">Tipe Ekosistem dan Bioma</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="iake" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu2'), loadContent('Interaksi_Antar_Komponen_Ekosistem.html', 'iake')">Interaksi Antar Komponen Ekosistem</a>
+                    <!-- Submenu -->
+                    <ul id="submenu2" class="hidden pl-4">
+                        <li><a id="simbiosis" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Simbiosis.html', 'simbiosis')">Simbiosis</a></li>
+                        <li><a id="predasi" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('predasi.html', 'predasi')">Predasi</a></li>
+                        <li><a id="kompetisi" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('kompetisi.html', 'kompetisi')">Kompetisi</a></li>
+                        <li><a id="review1" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_interaksi.html', 'review1')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="rjm" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu3'), loadContent('rantai_dan_jaringan_makanan.html', 'rjm')">Rantai dan Jaring Makanan</a>
+                    <!-- Submenu -->
+                    <ul id="submenu3" class="hidden pl-4">
+                        <li><a id="rjpe" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('rantai_makanan_dan_piramida_ekologi.html', 'rjpe')">Rantai Makanan dan Piramida Ekologi</a></li>
+                        <li><a id="dps" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('dinamika_populasi_dan_suksesi.html', 'dps')">Dinamika Populasi dan Suksesi</a></li>
+                        <li><a id="review2" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_jaring_rantai.html', 'review2')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="sb" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu4'), loadContent('Siklus_Biogeokimia.html', 'sb')">Siklus Biogeokimia</a>
+                    <!-- Submenu -->
+                    <ul id="submenu4" class="hidden pl-4">
+                        <li><a id="review3" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Review_Pembelajaran_Biogeokimia.html', 'review3')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu5')">Masalah Lingkungan dan Upayanya</a>
+                    <!-- Submenu -->
+                    <ul id="submenu5" class="hidden pl-4">
+                        <li><a id="jpl" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('jenis_pencemaran_lingkungan.html', 'jpl')">Jenis Pencemaran Lingkungan</a></li>
+                        <li><a id="upe" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('upaya_pelestarian_ekosistem.html', 'upe')">Upaya Pelestarian Ekosistem</a></li>
+                        <li><a id="review4" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_masalah_lingkungan.html', 'review4')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="posttest" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('posttest.html', 'posttest')">Post Test</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- sidebar mobile -->
+        <button id="sidebarToggle" class="fixed top-1/2 left-2 z-50 p-2 bg-gray-500 text-white rounded-full shadow-md transition-transform lg:hidden">
+            ➜
+        </button>
+
+        <aside id="sidebar" class="w-64 mt-20 h-screen fixed top-0 left-[-100%] transition-all duration-300 shadow-lg" style="background-color: rgba(205, 206, 207, 1);">
+            <ul class="py-2 px-2">
+                <li>
+                    <a id="pre-test-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('pretest.html', 'pre-test-m')">Pretest</a>
+                </li>
+                <li>
+                    <a id="apersepsi-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('apersepsi.html', 'apersepsi-m')">Apersepsi</a>
+                </li>
+                <li>
+                    <a  id="preview-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('preview.html', 'preview-m')">Preview</a>
+                </li>
+                <li >
+                    <a href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu-m1'), loadContent('Ekosistem.html')">Ekosistem</a>
+                    <!-- Submenu -->
+                    <ul id="submenu-m1" class="hidden pl-4">
+                        <li><a id="kpe-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Komponen_Penyusun_Ekosistem.html', 'kpe-m')">Komponen Penyusun Ekosistem</a></li>
+                        <li><a id="teb-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('tipe_ekosistem_bioma.html', 'teb-m')">Tipe Ekosistem dan Bioma</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="iake-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu-m2'), loadContent('Interaksi_Antar_Komponen_Ekosistem.html', 'iake-m')">Interaksi Antar Komponen Ekosistem</a>
+                    <!-- Submenu -->
+                    <ul id="submenu-m2" class="hidden pl-4">
+                        <li><a id="simbiosis-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Simbiosis.html', 'simbiosis-m')">Simbiosis</a></li>
+                        <li><a id="predasi-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('predasi.html', 'predasi-m')">Predasi</a></li>
+                        <li><a id="kompetisi-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('kompetisi.html', 'kompetisi-m')">Kompetisi</a></li>
+                        <li><a id="review1-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_interaksi.html', 'review1-m')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="rjm" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu-m3'), loadContent('rantai_dan_jaringan_makanan.html', 'rjm-m')">Rantai dan Jaring Makanan</a>
+                    <!-- Submenu -->
+                    <ul id="submenu-m3" class="hidden pl-4">
+                        <li><a id="rjpe-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('rantai_makanan_dan_piramida_ekologi.html', 'rjpe-m')">Rantai Makanan dan Piramida Ekologi</a></li>
+                        <li><a id="dps-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('dinamika_populasi_dan_suksesi.html', 'dps-m')">Dinamika Populasi dan Suksesi</a></li>
+                        <li><a id="review2-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_jaring_rantai.html', 'review2-m')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a id="sb-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu-m4'), loadContent('Siklus_Biogeokimia.html', 'sb-m')">Siklus Biogeokimia</a>
+                    <!-- Submenu -->
+                    <ul id="submenu-m4" class="hidden pl-4">
+                        <li><a id="review3-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('Review_Pembelajaran_Biogeokimia.html', 'review3-m')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li >
+                    <a href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="toggleMenu('submenu-m5')">Masalah Lingkungan dan Upayanya</a>
+                    <!-- Submenu -->
+                    <ul id="submenu-m5" class="hidden pl-4">
+                        <li><a id="jpl-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('jenis_pencemaran_lingkungan.html', 'jpl-m')">Jenis Pencemaran Lingkungan</a></li>
+                        <li><a id="upe-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('upaya_pelestarian_ekosistem.html', 'upe-m')">Upaya Pelestarian Ekosistem</a></li>
+                        <li><a id="review4-m" href="#" class="block p-2 text-black text-sm font-bold hover:bg-white transition" onclick="loadContent('review_masalah_lingkungan.html', 'review4-m')">Review Pembelajaran</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="posttest-m" href="#" class="block p-2 text-black font-bold hover:bg-white transition" onclick="loadContent('posttest.html', 'posttest-m')">Post Test</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Konten yang berubah -->
+        <main class="min320:ml-0 min320:px-2 lg:ml-64 lg:p-2 max-h-screen">
+            <div id="content" class="lg:p-5 rounded shadow py-6" style="background-color: rgba(205, 206, 207, 0.7);">
+                <h2 class="text-2xl min320:px-4 font-bold">Pilih materi dari sidebar</h2>
+                <p class="text-gray-600 min320:px-4">Klik salah satu daftar isi untuk memuat konten.</p>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
